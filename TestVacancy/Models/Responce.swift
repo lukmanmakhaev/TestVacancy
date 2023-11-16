@@ -37,14 +37,11 @@ class Responce: Codable {
 // MARK: - Item
 class Vacancy: Codable {
     let id: String?
-    //let premium: Bool?
     let name: String?
-    //let department: Employment?
-    //let hasTest, responseLetterRequired: Bool?
-    //let area: Area?
     let salary: Salary?
+    let description: String?
     //let type: Employment?
-    //let address: Address?
+    let address: Address?
     //let responseURL, sortPointDistance: JSONNull?
     //let publishedAt, createdAt: Date?
     //let archived: Bool?
@@ -68,17 +65,29 @@ class Vacancy: Codable {
     //let branding: Branding?
 
     enum CodingKeys: String, CodingKey {
-        case id, name
+        case id, name, description, address
         case salary
         case employer, snippet
     }
-    init(id: String?, name: String?, salary: Salary?, employer: Employer?, snippet: Snippet?) {
+
+    init(id: String?, name: String?, salary: Salary?, description: String?, address: Address?, employer: Employer?, snippet: Snippet?) {
         self.id = id
         self.name = name
         self.salary = salary
+        self.description = description
+        self.address = address
         self.employer = employer
         self.snippet = snippet
     }
+    
+//    var beutifiedDescr: String {
+//        let data = description!.data(using: .utf8)!
+//        let attributedString = try? NSAttributedString(
+//            data: data,
+//            options: [.documentType: NSAttributedString.DocumentType.html],
+//            documentAttributes: nil)
+//        return String(describing: attributedString)
+//    }
 
 }
 
@@ -87,7 +96,7 @@ class Vacancy: Codable {
 class Address: Codable {
     let city, street, building: String?
     let lat, lng: Double?
-    let description: JSONNull?
+    let description: String?
     let raw: String?
     let metro: Metro?
     let metroStations: [Metro]?
@@ -99,7 +108,7 @@ class Address: Codable {
         case id
     }
 
-    init(city: String?, street: String?, building: String?, lat: Double?, lng: Double?, description: JSONNull?, raw: String?, metro: Metro?, metroStations: [Metro]?, id: String?) {
+    init(city: String?, street: String?, building: String?, lat: Double?, lng: Double?, description: String?, raw: String?, metro: Metro?, metroStations: [Metro]?, id: String?) {
         self.city = city
         self.street = street
         self.building = building

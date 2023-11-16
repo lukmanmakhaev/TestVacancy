@@ -18,6 +18,8 @@ class VacancyTableViewCell: UITableViewCell {
             guard let vacancyItem = vacancy else {return}
             if let imageUrl = URL(string: (vacancyItem.employer?.logoUrls?.the240) ?? "") {
                 companyImageView.kf.setImage(with: imageUrl)
+            } else {
+                companyImageView.image = UIImage()
             }
             if let name = vacancyItem.name {
                 vacancyNameLabel.text = name
@@ -123,8 +125,8 @@ class VacancyTableViewCell: UITableViewCell {
         containerView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -10).isActive = true;
         containerView.heightAnchor.constraint(equalToConstant: 130).isActive = true
         
-        companyImageView.topAnchor.constraint(equalTo: self.containerView.topAnchor, constant: 10).isActive = true
-        companyImageView.trailingAnchor.constraint(equalTo: self.salaryLabel.trailingAnchor, constant: -10).isActive = true
+        companyImageView.centerYAnchor.constraint(equalTo: self.containerView.centerYAnchor).isActive = true;
+        companyImageView.trailingAnchor.constraint(equalTo: self.containerView.trailingAnchor, constant: -10).isActive = true
         companyImageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
         companyImageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         

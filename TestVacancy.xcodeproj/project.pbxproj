@@ -16,8 +16,10 @@
 		070C32BB2B0017AE00D7C0C5 /* VacancyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C32BA2B0017AE00D7C0C5 /* VacancyTableViewCell.swift */; };
 		070C32DA2B021F8300D7C0C5 /* Responce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C32D92B021F8300D7C0C5 /* Responce.swift */; };
 		070C32E32B02485F00D7C0C5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C32E22B02485F00D7C0C5 /* NetworkService.swift */; };
-		070C32E62B024AD300D7C0C5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 070C32E52B024AD300D7C0C5 /* Alamofire */; };
 		070C32E92B03666500D7C0C5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 070C32E82B03666500D7C0C5 /* Kingfisher */; };
+		073A01C22B0592A900397DE7 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A01C12B0592A900397DE7 /* Suggestion.swift */; };
+		073A01C42B0599C700397DE7 /* VacanciesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A01C32B0599C700397DE7 /* VacanciesList.swift */; };
+		073A01C82B063BAE00397DE7 /* String + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A01C72B063BAE00397DE7 /* String + ext.swift */; };
 		074734002B03B76A00390B80 /* UIColor + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074733FF2B03B76A00390B80 /* UIColor + ext.swift */; };
 		076180202B04EC6B001E3861 /* UIViewController + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0761801F2B04EC6B001E3861 /* UIViewController + ext.swift */; };
 		076180242B056FCD001E3861 /* VacancyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076180232B056FCD001E3861 /* VacancyDetailView.swift */; };
@@ -35,6 +37,9 @@
 		070C32BA2B0017AE00D7C0C5 /* VacancyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyTableViewCell.swift; sourceTree = "<group>"; };
 		070C32D92B021F8300D7C0C5 /* Responce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responce.swift; sourceTree = "<group>"; };
 		070C32E22B02485F00D7C0C5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		073A01C12B0592A900397DE7 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
+		073A01C32B0599C700397DE7 /* VacanciesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesList.swift; sourceTree = "<group>"; };
+		073A01C72B063BAE00397DE7 /* String + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + ext.swift"; sourceTree = "<group>"; };
 		074733FF2B03B76A00390B80 /* UIColor + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + ext.swift"; sourceTree = "<group>"; };
 		0761801F2B04EC6B001E3861 /* UIViewController + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + ext.swift"; sourceTree = "<group>"; };
 		076180232B056FCD001E3861 /* VacancyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyDetailView.swift; sourceTree = "<group>"; };
@@ -46,7 +51,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				070C32E92B03666500D7C0C5 /* Kingfisher in Frameworks */,
-				070C32E62B024AD300D7C0C5 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +102,7 @@
 			children = (
 				074733FF2B03B76A00390B80 /* UIColor + ext.swift */,
 				0761801F2B04EC6B001E3861 /* UIViewController + ext.swift */,
+				073A01C72B063BAE00397DE7 /* String + ext.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				070C32D92B021F8300D7C0C5 /* Responce.swift */,
+				073A01C12B0592A900397DE7 /* Suggestion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,6 +123,7 @@
 				070C32BA2B0017AE00D7C0C5 /* VacancyTableViewCell.swift */,
 				070C32B82AFFF49300D7C0C5 /* SearchViewViewModel.swift */,
 				076180232B056FCD001E3861 /* VacancyDetailView.swift */,
+				073A01C32B0599C700397DE7 /* VacanciesList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,7 +145,6 @@
 			);
 			name = TestVacancy;
 			packageProductDependencies = (
-				070C32E52B024AD300D7C0C5 /* Alamofire */,
 				070C32E82B03666500D7C0C5 /* Kingfisher */,
 			);
 			productName = TestVacancy;
@@ -170,7 +176,6 @@
 			);
 			mainGroup = 070C32942AFF631000D7C0C5;
 			packageReferences = (
-				070C32E42B024AD300D7C0C5 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				070C32E72B03666500D7C0C5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 070C329E2AFF631000D7C0C5 /* Products */;
@@ -200,11 +205,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				070C32A52AFF631000D7C0C5 /* SearchView.swift in Sources */,
+				073A01C22B0592A900397DE7 /* Suggestion.swift in Sources */,
 				076180202B04EC6B001E3861 /* UIViewController + ext.swift in Sources */,
+				073A01C42B0599C700397DE7 /* VacanciesList.swift in Sources */,
 				070C32BB2B0017AE00D7C0C5 /* VacancyTableViewCell.swift in Sources */,
 				070C32A12AFF631000D7C0C5 /* AppDelegate.swift in Sources */,
 				070C32A32AFF631000D7C0C5 /* SceneDelegate.swift in Sources */,
 				070C32B92AFFF49300D7C0C5 /* SearchViewViewModel.swift in Sources */,
+				073A01C82B063BAE00397DE7 /* String + ext.swift in Sources */,
 				070C32DA2B021F8300D7C0C5 /* Responce.swift in Sources */,
 				076180242B056FCD001E3861 /* VacancyDetailView.swift in Sources */,
 				070C32E32B02485F00D7C0C5 /* NetworkService.swift in Sources */,
@@ -423,14 +431,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		070C32E42B024AD300D7C0C5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.8.1;
-			};
-		};
 		070C32E72B03666500D7C0C5 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -442,11 +442,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		070C32E52B024AD300D7C0C5 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 070C32E42B024AD300D7C0C5 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		070C32E82B03666500D7C0C5 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 070C32E72B03666500D7C0C5 /* XCRemoteSwiftPackageReference "Kingfisher" */;
