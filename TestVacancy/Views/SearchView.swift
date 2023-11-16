@@ -11,7 +11,7 @@ import Combine
 class SearchView: UIViewController {
     
     var viewModel = SearchViewViewModel()
-    var vacanciesVC = VacanciesList()
+    var vacanciesTVC = VacanciesTableViewController()
     
     // MARK: Properties
     var searchBar: UISearchBar = {
@@ -35,7 +35,7 @@ class SearchView: UIViewController {
         view.backgroundColor = .red
         self.dismissKeyboard()
         
-        vacanciesVC.viewModel = viewModel
+        vacanciesTVC.viewModel = viewModel
         
         searchBar.delegate = self
         tableView.dataSource = self
@@ -59,7 +59,7 @@ class SearchView: UIViewController {
                     self?.viewModel.getSuggests(text: searchText)
                 } else {
                     self?.viewModel.suggests.removeAll()
-                    self?.vacanciesVC.tableView.reloadData()
+                    self?.vacanciesTVC.tableView.reloadData()
                     self?.tableView.reloadData()
                 }
             }
@@ -77,12 +77,12 @@ class SearchView: UIViewController {
         searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         
-        view.addSubview(vacanciesVC.tableView)
-        vacanciesVC.tableView.translatesAutoresizingMaskIntoConstraints = false
-        vacanciesVC.tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor).isActive = true
-        vacanciesVC.tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        vacanciesVC.tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        vacanciesVC.tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        view.addSubview(vacanciesTVC.tableView)
+        vacanciesTVC.tableView.translatesAutoresizingMaskIntoConstraints = false
+        vacanciesTVC.tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor).isActive = true
+        vacanciesTVC.tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        vacanciesTVC.tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        vacanciesTVC.tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -120,7 +120,7 @@ extension SearchView: UITableViewDataSource, UITableViewDelegate {
         self.viewModel.vacancies.removeAll()
         self.viewModel.searchVacancy(text: self.searchBar.text ?? "", page: 0, pagination: false)
         tableView.isHidden = true
-        self.vacanciesVC.tableView.reloadData()
+        self.vacanciesTVC.tableView.reloadData()
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -141,7 +141,7 @@ extension SearchView: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.viewModel.vacancies.removeAll()
         self.viewModel.searchVacancy(text: searchBar.text!, page: 0, pagination: false)
-        vacanciesVC.tableView.reloadData()
+        vacanciesTVC.tableView.reloadData()
         tableView.isHidden = true
         searchBar.resignFirstResponder()
     }

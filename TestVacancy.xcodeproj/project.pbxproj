@@ -18,7 +18,7 @@
 		070C32E32B02485F00D7C0C5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C32E22B02485F00D7C0C5 /* NetworkService.swift */; };
 		070C32E92B03666500D7C0C5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 070C32E82B03666500D7C0C5 /* Kingfisher */; };
 		073A01C22B0592A900397DE7 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A01C12B0592A900397DE7 /* Suggestion.swift */; };
-		073A01C42B0599C700397DE7 /* VacanciesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A01C32B0599C700397DE7 /* VacanciesList.swift */; };
+		073A01C42B0599C700397DE7 /* VacanciesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A01C32B0599C700397DE7 /* VacanciesTableViewController.swift */; };
 		073A01C82B063BAE00397DE7 /* String + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A01C72B063BAE00397DE7 /* String + ext.swift */; };
 		074734002B03B76A00390B80 /* UIColor + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074733FF2B03B76A00390B80 /* UIColor + ext.swift */; };
 		076180202B04EC6B001E3861 /* UIViewController + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0761801F2B04EC6B001E3861 /* UIViewController + ext.swift */; };
@@ -38,7 +38,7 @@
 		070C32D92B021F8300D7C0C5 /* Responce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responce.swift; sourceTree = "<group>"; };
 		070C32E22B02485F00D7C0C5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		073A01C12B0592A900397DE7 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
-		073A01C32B0599C700397DE7 /* VacanciesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesList.swift; sourceTree = "<group>"; };
+		073A01C32B0599C700397DE7 /* VacanciesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesTableViewController.swift; sourceTree = "<group>"; };
 		073A01C72B063BAE00397DE7 /* String + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + ext.swift"; sourceTree = "<group>"; };
 		074733FF2B03B76A00390B80 /* UIColor + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + ext.swift"; sourceTree = "<group>"; };
 		0761801F2B04EC6B001E3861 /* UIViewController + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + ext.swift"; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 				070C32BA2B0017AE00D7C0C5 /* VacancyTableViewCell.swift */,
 				070C32B82AFFF49300D7C0C5 /* SearchViewViewModel.swift */,
 				076180232B056FCD001E3861 /* VacancyDetailView.swift */,
-				073A01C32B0599C700397DE7 /* VacanciesList.swift */,
+				073A01C32B0599C700397DE7 /* VacanciesTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 				070C32A52AFF631000D7C0C5 /* SearchView.swift in Sources */,
 				073A01C22B0592A900397DE7 /* Suggestion.swift in Sources */,
 				076180202B04EC6B001E3861 /* UIViewController + ext.swift in Sources */,
-				073A01C42B0599C700397DE7 /* VacanciesList.swift in Sources */,
+				073A01C42B0599C700397DE7 /* VacanciesTableViewController.swift in Sources */,
 				070C32BB2B0017AE00D7C0C5 /* VacancyTableViewCell.swift in Sources */,
 				070C32A12AFF631000D7C0C5 /* AppDelegate.swift in Sources */,
 				070C32A32AFF631000D7C0C5 /* SceneDelegate.swift in Sources */,

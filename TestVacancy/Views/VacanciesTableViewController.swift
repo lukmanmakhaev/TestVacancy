@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class VacanciesList: UITableViewController {
+class VacanciesTableViewController: UITableViewController {
     var viewModel = SearchViewViewModel()
     var detailsViewController = VacancyDetailView()
 
@@ -27,7 +27,7 @@ class VacanciesList: UITableViewController {
 }
 
 // MARK: TABLEVIEW FUNCTIONS
-extension VacanciesList {
+extension VacanciesTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.vacancies.count
@@ -78,6 +78,6 @@ extension VacanciesList {
 }
 
 #Preview {
-    let controller = VacanciesList()
+    let controller = VacanciesTableViewController()
     return controller
 }
